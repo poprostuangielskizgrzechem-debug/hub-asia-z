@@ -2583,6 +2583,7 @@ video {
             .hub-ex-tf-status { font-size: 14px; color: #6b7280; }
             .hub-ex-tf-status.is-ok { color: #15803d; font-weight: 600; }
             .hub-ex-tf-status.is-bad { color: #b91c1c; font-weight: 600; }
+            .hub-ex-tf-key { color: #15803d; font-weight: 600; margin-top: 4px; }
             .hub-ex-input:focus { border-color: #1e5aae; }
             .hub-ex-input.is-ok { border-color: #1f9254; background: #eafaf0; color: #15803d; }
             .hub-ex-input.is-bad { border-color: #ee4352; background: #fdecec; color: #b91c1c; }
@@ -6595,6 +6596,13 @@ video {
                     if (sEl) {
                         sEl.textContent = (done ? (good ? '✓ Dobrze' : '✗ Jeszcze nie') : '') + (tries > 1 ? (done ? ' · ' : '') + 'próba ' + tries : '');
                         sEl.className = 'hub-ex-tf-status' + (done ? (good ? ' is-ok' : ' is-bad') : '');
+                        // Po trzeciej nieudanej probie pokaz poprawna odpowiedz.
+                        if (done && !good && tries >= 3) {
+                            var key = document.createElement('div');
+                            key.className = 'hub-ex-tf-key';
+                            key.textContent = 'Poprawnie: ' + exAccepted(it.answers[0])[0];
+                            sEl.appendChild(key);
+                        }
                     }
                 });
                 var s = box.querySelector('[data-ex-score="' + exIdx + '"]');
