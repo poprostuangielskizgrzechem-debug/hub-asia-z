@@ -2224,6 +2224,7 @@ video {
             <button type="button" class="hub-nav-btn" data-hub-nav="pronunciation">&#128266; Wymowa</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="writing">&#128214; Teksty</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="exercises">&#128203; &Cacute;wiczenia</button>
+            <button type="button" class="hub-nav-btn" data-hub-nav="games">&#127918; Gry</button>
             <button type="button" class="hub-nav-btn" data-hub-nav="sentences">&#9997;&#65039; Zdania</button>
         </nav>
         <!-- === HUB MODULE - END (nav) === -->
@@ -2696,6 +2697,33 @@ video {
             </div>
         </section>
         <!-- === HUB MODULE - END (exercises view) === -->
+        <!-- === HUB MODULE - START (games view) === -->
+        <section id="hub-games-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
+            <div class="hub-shell">
+                <div class="hub-topbar"></div>
+                <div class="hub-inner">
+
+                    <div class="hub-head">
+                        <h2 class="hub-title">Gry</h2>
+                        <p class="hub-tagline">Gry z angielskim do zagrania na telefonie albo komputerze.</p>
+                    </div>
+
+                    <div id="hub-games-list"></div>
+
+                    <div class="hub-footer">
+                        <button type="button" class="hub-link-btn" data-hub-nav="home">&larr; Powr&oacute;t</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <div id="hub-game-overlay" class="no-print" style="position:fixed; inset:0; z-index:9999; background:#fff; display:none; flex-direction:column;">
+            <div style="display:flex; justify-content:flex-end; padding:6px 10px; border-bottom:1px solid #ddd; background:#f7f7f7;">
+                <button type="button" class="hub-link-btn" id="hub-game-close">&#10005; Zamknij gr&#281;</button>
+            </div>
+            <iframe id="hub-game-frame" title="Gra" style="flex:1; width:100%; border:0;"></iframe>
+        </div>
+        <!-- === HUB MODULE - END (games view) === -->
         <!-- === HUB MODULE - START (sentences view) === -->
         <section id="hub-sentences-view" class="hidden no-print flex-grow flex items-start justify-center relative z-20">
             <div class="hub-shell">
@@ -3168,6 +3196,32 @@ video {
                                     "sentenceWithGap": "You want me to wear a winter hat and gloves on the beach in July? That's [gap]! Everyone will laugh at me.",
                                     "firstLetterHint": "r"
                         }
+            ],
+            "Lekcja 4 (22.10)": [
+                        {
+                                    "word": "bargain",
+                                    "translation": "okazja (cenowa)",
+                                    "definition": "something you buy for much less than its usual price",
+                                    "pos": "n",
+                                    "sentenceWithGap": "Only 20 złoty for these trainers? That's a real [gap]!",
+                                    "firstLetterHint": "b"
+                        },
+                        {
+                                    "word": "rot",
+                                    "translation": "gnić",
+                                    "definition": "to go bad and soft, e.g. fruit or wood",
+                                    "pos": "v",
+                                    "sentenceWithGap": "If you leave the apples in a warm kitchen for weeks, they will start to [gap].",
+                                    "firstLetterHint": "r"
+                        },
+                        {
+                                    "word": "rotten",
+                                    "translation": "zgniły",
+                                    "definition": "gone bad and not good to eat",
+                                    "pos": "adj",
+                                    "sentenceWithGap": "Don't eat that egg! It smells awful, it's [gap].",
+                                    "firstLetterHint": "r"
+                        }
             ]
 };
 
@@ -3180,8 +3234,8 @@ video {
         "teacherWhatsApp": "48699880600",
         "storageKey": "hub_asia-z_2026-10",
         "studentKey": "hub_asia-z",
-        "stamp": "aktualizacja po lekcji 3, 15.10.2026",
-        "lastLessonPhrase": "lekcji 3",
+        "stamp": "aktualizacja po lekcji 4, 22.10.2026",
+        "lastLessonPhrase": "lekcji 4",
         "lessons": [
                 {
                         "label": "Lekcja 1",
@@ -3206,6 +3260,14 @@ video {
                         "vocabCount": 5,
                         "extraVocabCount": 0,
                         "topic": "Sprawdzenie maila z Arkusza E8 i test na Hubie ze słówek z English Class B1, Unit 1.1. Repetytorium ósmoklasisty cz. 1 (Macmillan), str. 87, zad. 4: strona bierna. Listening, zad. 3."
+                },
+                {
+                        "label": "Lekcja 4",
+                        "dateLabel": "22.10.2026",
+                        "categoryKey": "Lekcja 4 (22.10)",
+                        "vocabCount": 3,
+                        "extraVocabCount": 0,
+                        "topic": "Zaimek bezosobowy (Repetytorium ósmoklasisty cz. 1, Macmillan, str. 87). Słuchanie: Unit 7, str. 88, zad. 4."
                 }
         ],
         "grammar": [
@@ -3253,6 +3315,130 @@ video {
                                         "label": "Passive verbs with two objects - Test-English",
                                         "url": "https://test-english.com/grammar-points/b2/passive-verbs-with-two-objects/",
                                         "type": "test",
+                                        "questions": [],
+                                        "quizzes": []
+                                }
+                        ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "22.10.2026",
+                        "topic": "Present Perfect Simple i Continuous",
+                        "mistake": "",
+                        "correction": "",
+                        "items": [],
+                        "explanation": "Kiedy który czas, jak go zbudować, czym różni się Simple od Continuous i jakie błędy robimy najczęściej.",
+                        "sections": [
+                                {
+                                        "type": "tip",
+                                        "tone": "blue",
+                                        "emoji": "💡",
+                                        "title": "Najpierw wspólna idea",
+                                        "text": "Oba czasy **patrzą wstecz z teraz**: coś zaczęło się w przeszłości i ma związek z teraźniejszością. Simple mówi o **efekcie** (ile, co zrobione), Continuous o **procesie** (jak długo, co się działo)."
+                                },
+                                {
+                                        "type": "card",
+                                        "tone": "blue",
+                                        "emoji": "1️⃣",
+                                        "title": "Present Perfect Simple",
+                                        "points": [
+                                                "Budowa: **have/has + III forma** (I have played, she has passed, they haven't won).",
+                                                "Doświadczenia życiowe, bez podawania kiedy: **ever, never, before**.",
+                                                "Coś się stało i **efekt widać teraz**: **just, already, yet**.",
+                                                "**Ile? Ile razy?** do teraz: liczby, ilości, so far.",
+                                                "Stan trwający do teraz z **for/since**, szczególnie z czasownikami statycznymi (**know, be, have, like**)."
+                                        ],
+                                        "examples": [
+                                                "I have never driven on a motorway.",
+                                                "We have just won the first set!",
+                                                "Bartek has scored 15 points so far.",
+                                                "I have known our coach since primary school."
+                                        ]
+                                },
+                                {
+                                        "type": "card",
+                                        "tone": "green",
+                                        "emoji": "2️⃣",
+                                        "title": "Present Perfect Continuous",
+                                        "points": [
+                                                "Budowa: **have/has been + -ing** (I have been training, he has been waiting).",
+                                                "**Jak długo?** coś trwa do teraz: **for, since, all day, how long**.",
+                                                "Czynność właśnie się skończyła, ale **widać jej ślady**: jesteś zmęczony, spocony, czerwony.",
+                                                "Nacisk na **sam proces**, nie na wynik."
+                                        ],
+                                        "examples": [
+                                                "How long have you been playing volleyball?",
+                                                "I'm exhausted. We have been training since four o'clock.",
+                                                "Your hands are red! Have you been serving all morning?"
+                                        ]
+                                },
+                                {
+                                        "type": "table",
+                                        "tone": "green",
+                                        "emoji": "⚖️",
+                                        "title": "Simple czy Continuous?",
+                                        "head": [
+                                                "Cecha",
+                                                "Present Perfect Simple",
+                                                "Present Perfect Continuous"
+                                        ],
+                                        "rows": [
+                                                [
+                                                        "Pytanie",
+                                                        "Ile? Ile razy? Co zrobione?",
+                                                        "Jak długo? Co się działo?"
+                                                ],
+                                                [
+                                                        "Nacisk",
+                                                        "efekt, wynik",
+                                                        "proces, czas trwania"
+                                                ],
+                                                [
+                                                        "Czy skończone?",
+                                                        "zwykle tak",
+                                                        "niekoniecznie"
+                                                ],
+                                                [
+                                                        "Przykład",
+                                                        "I have taken three driving lessons.",
+                                                        "I have been taking driving lessons for a month."
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "type": "tip",
+                                        "tone": "gold",
+                                        "emoji": "📅",
+                                        "title": "since, for i from",
+                                        "text": "**since** + punkt w czasie: since 2024, since last year, since I was seven, since I started athletics.\n**for** + okres: for a year, for over a year, for two weeks, for ages.\n**since** łączymy z czasami perfect. W innych czasach mówimy **from**: We start practising the Polonaise **from** November."
+                                },
+                                {
+                                        "type": "card",
+                                        "tone": "red",
+                                        "emoji": "🚫",
+                                        "title": "Najczęstsze błędy",
+                                        "points": [
+                                                "Po polsku mówimy „znam go od\" w czasie teraźniejszym, po angielsku tak nie wolno.",
+                                                "Present Perfect **nigdy** z konkretnym czasem w przeszłości (yesterday, last week, ago).",
+                                                "**for** + okres czasu (for 3 years), **since** + punkt startu (since 2020).",
+                                                "Czasowniki statyczne (know, like, have = mieć, be) nie mają formy Continuous.",
+                                                "Gdy liczysz (ile razy, ile czegoś), używaj Simple, nie Continuous."
+                                        ],
+                                        "examples": [
+                                                "❌ I know him since 2020. ✅ I have known him since 2020.",
+                                                "❌ I have passed my driving test yesterday. ✅ I passed my driving test yesterday.",
+                                                "❌ I am playing volleyball for three years. ✅ I have been playing volleyball for three years.",
+                                                "❌ We have been training since three hours. ✅ We have been training for three hours.",
+                                                "❌ I have been knowing our coach for years. ✅ I have known our coach for years.",
+                                                "❌ She has been taking the test three times. ✅ She has taken the test three times."
+                                        ]
+                                }
+                        ],
+                        "links": [
+                                {
+                                        "label": "Present Perfect Continuous vs. Present Perfect Simple | ROCK YOUR ENGLISH #10",
+                                        "url": "https://www.youtube.com/watch?v=kXiMDpQzHV0&t=447s",
+                                        "type": "youtube",
                                         "questions": [],
                                         "quizzes": []
                                 }
@@ -3317,6 +3503,7 @@ video {
                                 "recommend"
                         ],
                         "letters": false,
+                        "strict": false,
                         "items": [
                                 {
                                         "text": "Maja is fourteen and she is in Year 8. At first she seems quite [gap], because she doesn't say much in class. But when the teacher asks a difficult question, her hand is always up.",
@@ -3443,6 +3630,7 @@ video {
                         "columns": [],
                         "wordBox": [],
                         "letters": false,
+                        "strict": false,
                         "items": [
                                 {
                                         "text": "Someone stole my phone last week.",
@@ -3619,8 +3807,233 @@ video {
                                         ]
                                 }
                         ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "22.10.2026",
+                        "title": "1. Present Perfect Simple czy Continuous? (część 1)",
+                        "instructions": "Put the verbs in brackets into Present Perfect Simple or Present Perfect Continuous. Short forms (I've, she's, hasn't) are fine.",
+                        "layout": "list",
+                        "columns": [],
+                        "wordBox": [],
+                        "letters": false,
+                        "strict": false,
+                        "items": [
+                                {
+                                        "text": "I'm exhausted. We [gap] (train) in the sports hall since four o'clock.",
+                                        "answers": [
+                                                [
+                                                        "have been training",
+                                                        "'ve been training"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Kasia [gap] (take) her driving test three times, and she still hasn't passed.",
+                                        "answers": [
+                                                [
+                                                        "has taken",
+                                                        "'s taken"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "[gap] (how long / you / play) volleyball? - Since I was ten.",
+                                        "answers": [
+                                                [
+                                                        "How long have you been playing"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Our team [gap] (not lose) a single match this season.",
+                                        "answers": [
+                                                [
+                                                        "has not lost",
+                                                        "hasn't lost"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "My dad [gap] (teach) me to drive for two months, and he's starting to lose his patience.",
+                                        "answers": [
+                                                [
+                                                        "has been teaching",
+                                                        "'s been teaching"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (know) our coach since primary school.",
+                                        "answers": [
+                                                [
+                                                        "have known",
+                                                        "'ve known"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Your hands are all red! [gap] (you / serve) all morning?",
+                                        "answers": [
+                                                [
+                                                        "Have you been serving"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Bartek [gap] (score) 15 points so far in this match.",
+                                        "answers": [
+                                                [
+                                                        "has scored",
+                                                        "'s scored"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (never / drive) on a motorway. It looks terrifying!",
+                                        "answers": [
+                                                [
+                                                        "have never driven",
+                                                        "'ve never driven"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "We [gap] (just / win) the first set 25:21!",
+                                        "answers": [
+                                                [
+                                                        "have just won",
+                                                        "'ve just won"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Ola looks really nervous. She [gap] (wait) for the examiner for forty minutes.",
+                                        "answers": [
+                                                [
+                                                        "has been waiting",
+                                                        "'s been waiting"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (already / book) my second driving lesson for Friday.",
+                                        "answers": [
+                                                [
+                                                        "have already booked",
+                                                        "'ve already booked"
+                                                ]
+                                        ]
+                                }
+                        ]
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "22.10.2026",
+                        "title": "2. Present Perfect Simple czy Continuous? (część 2)",
+                        "instructions": "Wpisz czasowniki z nawiasu w Present Perfect Simple (have / has + III forma) albo Present Perfect Continuous (have / has been + -ing). Możesz pisać formy pełne (have not) albo skrócone (haven't, I've).",
+                        "layout": "list",
+                        "columns": [],
+                        "wordBox": [],
+                        "letters": false,
+                        "strict": false,
+                        "items": [
+                                {
+                                        "text": "I [gap] (train) for two hours and my legs are really tired.",
+                                        "answers": [
+                                                [
+                                                        "have been training",
+                                                        "'ve been training"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (run) three races today, and I won two of them.",
+                                        "answers": [
+                                                [
+                                                        "have run",
+                                                        "'ve run"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (know) my coach since I was twelve.",
+                                        "answers": [
+                                                [
+                                                        "have known",
+                                                        "'ve known"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "Why are you out of breath? – I [gap] (run) up the stairs.",
+                                        "answers": [
+                                                [
+                                                        "have been running",
+                                                        "'ve been running"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "We [gap] (live) in our new flat for over a year.",
+                                        "answers": [
+                                                [
+                                                        "have lived",
+                                                        "have been living",
+                                                        "'ve lived",
+                                                        "'ve been living"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (never / hit) a hurdle in a final. Fingers crossed!",
+                                        "answers": [
+                                                [
+                                                        "have never hit",
+                                                        "'ve never hit"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "It [gap] (rain) all morning, so the track is wet and slippery.",
+                                        "answers": [
+                                                [
+                                                        "has been raining",
+                                                        "'s been raining"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "I [gap] (already / write) my sentences with the new words. Can I send them to you on WhatsApp?",
+                                        "answers": [
+                                                [
+                                                        "have already written",
+                                                        "'ve already written"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "My schedule is crazy today. I [gap] (study) biology since 8 a.m. and I still have training in the evening.",
+                                        "answers": [
+                                                [
+                                                        "have been studying",
+                                                        "'ve been studying"
+                                                ]
+                                        ]
+                                },
+                                {
+                                        "text": "This season I [gap] (break) my personal best in the 400 m hurdles twice.",
+                                        "answers": [
+                                                [
+                                                        "have broken",
+                                                        "'ve broken"
+                                                ]
+                                        ]
+                                }
+                        ]
                 }
         ],
+        "games": [],
         "distractors": [
                 {
                         "word": "passport",
@@ -3996,6 +4409,24 @@ video {
                         "lessons": [
                                 "Lekcja 3"
                         ]
+                },
+                {
+                        "word": "bargain",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "rot",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
+                },
+                {
+                        "word": "rotten",
+                        "lessons": [
+                                "Lekcja 4"
+                        ]
                 }
         ],
         "sentenceCount": 5,
@@ -4014,6 +4445,11 @@ video {
                         "lessonLabel": "Lekcja 3",
                         "dateLabel": "15.10.2026",
                         "text": "Asiu, poćwicz słówka z Unit 1 z podręcznika i nowe słówka z naszych notatek. Zrób test ze strony biernej w zakładce „Gramatyka” (to link do zewnętrznej strony). Poćwicz wymowę w zakładce „Wymowa”, a potem napisz kilka zdań w zakładce „Zdania” i wyślij mi je na WhatsAppie."
+                },
+                {
+                        "lessonLabel": "Lekcja 4",
+                        "dateLabel": "22.10.2026",
+                        "text": "Obejrzyj filmik i przeczytaj opis w zakładce Gramatyka, a potem zrób zadania w zakładce Ćwiczenia. Ćwicz słownictwo regularnie. Zrób też Arkusz E8, który Ci wcześniej wysłałem."
                 }
         ]
 };
@@ -5452,6 +5888,7 @@ video {
         var PRONUNCIATION = HUB.pronunciation || [];
         var WRITING = HUB.writingSpeaking || [];
         var EXERCISES = HUB.exercises || [];
+        var GAMES = HUB.games || [];
         // Tryb pliku. "month" to hub miesieczny ucznia (slownictwo z jego lekcji,
         // gramatyka, wymowa, zdania, czasowniki). "unit" to strona jednego dzialu
         // z podrecznika: te same fiszki i ten sam test, tylko karmione slownictwem
@@ -5636,11 +6073,12 @@ video {
             pronunciation: 'hub-pronunciation-view',
             writing:       'hub-writing-view',
             exercises:     'hub-exercises-view',
-            sentences:     'hub-sentences-view'
+            sentences:     'hub-sentences-view',
+            games:         'hub-games-view'
         };
         var ALL_VIEW_IDS = [
             'hub-home-view', 'flashcards-view', 'config-view',
-            'hub-grammar-view', 'hub-media-view', 'hub-pronunciation-view', 'hub-writing-view', 'hub-exercises-view', 'hub-sentences-view', 'hub-verbs-view',
+            'hub-grammar-view', 'hub-media-view', 'hub-pronunciation-view', 'hub-writing-view', 'hub-exercises-view', 'hub-sentences-view', 'hub-verbs-view', 'hub-games-view',
             'path-selection-view', 'student-start-view', 'quiz-view'
         ];
 
@@ -5750,6 +6188,7 @@ video {
                 { key: 'pronunciation', icon: '🔊', label: 'Wymowa',    sub: count(PRONUNCIATION.length, 'słówko', 'słówka', 'słówek') + ' do posłuchania', count: PRONUNCIATION.length },
                 { key: 'writing',       icon: '📖', label: 'Teksty', sub: count(WRITING.length, 'tekst', 'teksty', 'tekstów') + ' do przeczytania/napisania', count: WRITING.length },
                 { key: 'exercises',     icon: '📋', label: 'Ćwiczenia', sub: count(EXERCISES.length, 'ćwiczenie', 'ćwiczenia', 'ćwiczeń') + ' z lukami', count: EXERCISES.length },
+                { key: 'games',         icon: '🎮', label: 'Gry', sub: count(GAMES.length, 'gra', 'gry', 'gier') + ' do zagrania', count: GAMES.length },
                 { key: 'sentences',     icon: '✍️', label: 'Ułóż zdania', sub: count(SENT_COUNT, 'słówko', 'słówka', 'słówek') + ' z puli ' + SENT_POOL.length + ', losowo', count: SENT_POOL.length }
             ];
             // Kafelek czasownikow inaczej wyszedlby na stronie Unitu aktywny, bo
@@ -6265,10 +6704,65 @@ video {
         }
         function exAccepted(a) { return Array.isArray(a) ? a : [a]; }
         // layout "transform": cale zdanie, wiec kropka/wykrzyknik na koncu nie decyduje.
-        function exMatch(ex, a, v) {
+        // Tolerancja wpisywanych odpowiedzi (decyzja Grzecha 2026-10-17, wszyscy uczniowie):
+        // brak/nadmiar interpunkcji i apostrofow, wersja AmE/BrE oraz drobna literowka
+        // (1 znak w jednym slowie od 5 liter) licza sie jako poprawne. Literowka NIE
+        // obejmuje koncowek -s/-es/-d/-ed/-n, bo to blad gramatyczny. Synonimy dopisuje
+        // sie do answers w hub_input.json. Luki do klikniecia i cwiczenia z
+        // "strict": true (np. "popraw pisownie") porownuja sie dokladnie, jak dawniej.
+        var EX_US_UK = { gray: 'grey', program: 'programme', check: 'cheque', tire: 'tyre', pajamas: 'pyjamas',
+            mom: 'mum', math: 'maths', aluminum: 'aluminium', jewelry: 'jewellery', plow: 'plough', donut: 'doughnut',
+            catalog: 'catalogue', dialog: 'dialogue', analog: 'analogue', skeptical: 'sceptical', mustache: 'moustache',
+            gotten: 'got', fall: 'autumn', apartment: 'flat', vacation: 'holiday', cookie: 'biscuit', cookies: 'biscuits' };
+        function exLoose(x) {
+            return exNorm(x).replace(/can't/g, 'cannot').replace(/won't/g, 'will not').replace(/n't/g, ' not')
+                .replace(/'re /g, ' are ').replace(/'ve /g, ' have ').replace(/'m /g, ' am ').replace(/'ll /g, ' will ').replace(/'/g, '').replace(/[.,!?;:"()“”„–—-]+/g, ' ')
+                .replace(/\s+/g, ' ').trim().split(' ').map(function (w) {
+                    if (EX_US_UK[w]) return EX_US_UK[w];
+                    return w.replace(/^([a-z]*(col|fav|flav|hon|hum|lab|neighb|beh|harb|rum|vap|arm|rig|vig))or(s|ed|ing|ite|ites|ful|able|ly|hood)?$/, '$1our$3')
+                        .replace(/([a-z]{2})(i|y)z(e|es|ed|ing|ation|ations)$/, '$1$2s$3')
+                        .replace(/^(cent|theat|met|lit|fib|kilomet|centimet|millimet)er(s)?$/, '$1re$2')
+                        .replace(/([aeiou])l(ed|ing|er|ers)$/, '$1ll$2');
+                }).join(' ');
+        }
+        function exLev(a, b) {
+            if (Math.abs(a.length - b.length) > 1) return 2;
+            // Damerau: zamiana dwoch sasiednich liter (littel) to tez jedna literowka.
+            var pp = [], prev = [], cur, i, j;
+            for (j = 0; j <= b.length; j++) prev[j] = j;
+            for (i = 1; i <= a.length; i++) {
+                cur = [i];
+                for (j = 1; j <= b.length; j++) {
+                    cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+                    if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) cur[j] = Math.min(cur[j], pp[j - 2] + 1);
+                }
+                pp = prev; prev = cur;
+            }
+            return prev[b.length];
+        }
+        function exTypoOk(x, v) {
+            var xw = x.split(' '), vw = v.split(' '), diffs = 0;
+            if (xw.length !== vw.length) return false;
+            for (var i = 0; i < xw.length; i++) {
+                if (xw[i] === vw[i]) continue;
+                var p = xw[i], q = vw[i];
+                if (p.length < 5 || q.length < 5) return false;
+                var lo = p.length <= q.length ? p : q, hi = p.length <= q.length ? q : p;
+                if (hi.indexOf(lo) === 0 && /^(s|es|d|ed|n)$/.test(hi.slice(lo.length))) return false;
+                if (exLev(p, q) > 1) return false;
+                diffs++;
+            }
+            return diffs <= 1;
+        }
+        function exMatch(ex, a, v, choice) {
             var f = ex && ex.layout === 'transform'
                 ? function (x) { return exNorm(x).replace(/\s*[.!?]+$/, ''); } : exNorm;
-            return !!String(v || '').trim() && exAccepted(a).some(function (x) { return f(x) === f(v); });
+            if (!String(v || '').trim()) return false;
+            var acc = exAccepted(a);
+            if (acc.some(function (x) { return f(x) === f(v); })) return true;
+            if (choice || (ex && ex.strict)) return false;
+            var lv = exLoose(v);
+            return !!lv && acc.some(function (x) { var lx = exLoose(x); return lx === lv || exTypoOk(lx, lv); });
         }
         function exLoad() {
             try { var o = JSON.parse(safeGet(EX_KEY) || '{}'); return (o && typeof o === 'object') ? o : {}; }
@@ -6322,7 +6816,7 @@ video {
                     total++;
                     var val = st.v[itIdx + '-' + gap] || '';
                     if (String(val).trim()) filled++;
-                    var good = exMatch(ex, a, val) && (ex.layout !== 'transform' || st.ic[itIdx]);
+                    var good = exMatch(ex, a, val, exIsChoice(ex, itIdx, gap)) && (ex.layout !== 'transform' || st.ic[itIdx]);
                     if (good) ok++;
                     else wrong.push({
                         num: ex.layout === 'sort' ? it.text
@@ -6564,7 +7058,8 @@ video {
                 return EXERCISES[+g.getAttribute('data-ex')].items[+g.getAttribute('data-it')].answers[+g.getAttribute('data-gap')];
             }
             function okValue(g, v) {
-                return exMatch(EXERCISES[+g.getAttribute('data-ex')], answerOf(g), v);
+                var ex = EXERCISES[+g.getAttribute('data-ex')];
+                return exMatch(ex, answerOf(g), v, exIsChoice(ex, +g.getAttribute('data-it'), +g.getAttribute('data-gap')));
             }
             function isLocked(g, st) {
                 if (st.checked) return true;
@@ -8641,6 +9136,53 @@ video {
         }
 
         // ==========================================
+        // Gry: osadzony HTML otwierany w pelnoekranowej ramce
+        // ==========================================
+        var gameUrl = null;
+        function renderGames() {
+            var box = el('hub-games-list');
+            if (!box) return;
+            if (!GAMES.length) {
+                box.innerHTML = '<p class="hub-tagline">Na razie nie ma tu gier.</p>';
+            } else {
+                box.innerHTML = '<div class="hub-links">' + GAMES.map(function (g, i) {
+                    return '<button type="button" class="hub-link-tile" data-hub-game="' + i + '" style="cursor:pointer; text-align:left; width:100%">' +
+                        '<span>🎮 <strong>' + escapeHtml(g.title) + '</strong>' +
+                        (g.description ? '<br><span class="hub-tile-sub">' + escapeHtml(g.description) + '</span>' : '') +
+                        '</span></button>';
+                }).join('') + '</div>';
+            }
+            // Przycisk nawigacji znika, gdy nie ma gier - pusta zakladka nic nie daje.
+            var navBtn = document.querySelector('.hub-nav-btn[data-hub-nav="games"]');
+            hideIf(!GAMES.length, navBtn);
+            box.addEventListener('click', function (e) {
+                var b = e.target.closest ? e.target.closest('[data-hub-game]') : null;
+                if (b) openGame(parseInt(b.getAttribute('data-hub-game'), 10));
+            });
+            var close = el('hub-game-close');
+            if (close) close.addEventListener('click', closeGame);
+        }
+        function openGame(i) {
+            var g = GAMES[i];
+            if (!g) return;
+            stopSpeaking();
+            var bin = atob(g.html64);
+            var bytes = new Uint8Array(bin.length);
+            for (var k = 0; k < bin.length; k++) bytes[k] = bin.charCodeAt(k);
+            if (gameUrl) URL.revokeObjectURL(gameUrl);
+            gameUrl = URL.createObjectURL(new Blob([bytes], { type: 'text/html;charset=utf-8' }));
+            el('hub-game-frame').src = gameUrl;
+            el('hub-game-overlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGame() {
+            el('hub-game-overlay').style.display = 'none';
+            el('hub-game-frame').src = 'about:blank';
+            if (gameUrl) { URL.revokeObjectURL(gameUrl); gameUrl = null; }
+            document.body.style.overflow = '';
+        }
+
+        // ==========================================
         // Start
         // ==========================================
         function hubInit() {
@@ -8658,6 +9200,7 @@ video {
                 renderPronunciation();
                 renderWriting();
                 renderExercises();
+                renderGames();
 
                 loadSentences();
                 renderSentLessonChips();
